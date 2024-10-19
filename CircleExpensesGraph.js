@@ -18,6 +18,7 @@ const ChartComponent = () => {
       await loadScript('https://www.amcharts.com/lib/3/themes/dark.js');
 
       window.AmCharts.makeChart('chartdiv', {
+        "hideCredits":true,
         type: 'pie',
         balloonText: "[[title]]<br><span style='font-size:14px'><b>[[value]]</b> ([[percents]]%)</span>",
         innerRadius: '70%',
