@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+
+.widget{
+  width: 480px; /* Same width */
+  height: 308px; /* Same height */
+  padding: 20px; /* Make sure padding is identical */
+  box-sizing: border-box; /* Ensure border-box is applied */
+  border-radius: 20px;
+  background-color: #005050;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px; /* Ensure font size is the same */
+  line-height: 1.5;
+  color: white;
+}
+  
+  /* Adjust spacing for exchange rate rows */
+  .exchange-rate-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0; /* Decrease padding to fit more rows */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Separator */
+  }
+  
+  .currency-info img {
+    width: 20px; /* Reduce flag size to fit better */
+    height: auto;
+    margin-right: 10px;
+  }
+  
+  .rate-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100px; /* Adjust width of buy/sell rates */
+    height: 3x;
+  }
+
+/* Top row containing currency select and date */
+.top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+.divider {
+    border: none; /* Remove default border */
+    border-bottom: 1px solid white; /* White line */
+    margin: 10px 0; /* Add some margin for spacing */
+    height: 1px; /* Set a height if needed */
+    background-color: transparent; /* Ensure it's transparent if height is set */
+}
+
+
+.currency-select {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.currency-select label {
+  margin-right: 10px;
+  font-weight: 500; /* Adjusted to slightly bolder for labels */
+}
+
+/* Base styles for the dropdown */
+#base-currency {
+    width: 120px;
+    padding: 10px;
+    border: 1px solid #007474;
+    border-radius: 5px;
+    background-color: #005050;
+    color: white;
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="16px" height="16px"><path d="M7 10l5 5 5-5H7z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+  
+  #base-currency:hover,
+  #base-currency:focus {
+    background-color: #034b4b;
+    outline: none;
+  }
+  
+  #base-currency option {
+    background-color: #014242;
+    color: white;
+  }
+  
+  #base-currency option:hover {
+    background-color: #014f4f;
+  }
+  
+  /* Apply the same styling to the date-range select dropdown in company shares widget */
+  .date-range-select {
+    width: 120px; /* Same width */
+    padding: 10px; /* Same padding */
+    border: 1px solid #007474; /* Darker border color */
+    border-radius: 5px;
+    background-color: #005050; /* Set background color to match theme */
+    color: white; /* Text color */
+    appearance: none; /* Remove default dropdown arrow */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="16px" height="16px"><path d="M7 10l5 5 5-5H7z"/></svg>'); /* Custom dropdown arrow */
+    background-repeat: no-repeat;
+    background-position: right 10px center; /* Position the arrow */
+    background-size: 16px; /* Size of the arrow */
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transition effects */
+  }
+  
+  .date-range-select:hover,
+  .date-range-select:focus {
+    background-color: #034b4b; /* Darker background on hover/focus */
+    outline: none; /* Remove default focus outline */
+  }
+  
+  .date-range-select option {
+    background-color: #014242; /* Option background color */
+    color: white; /* Option text color */
+  }
+  
+  .date-range-select option:hover {
+    background-color: #014f4f; /* Background color on hover for options */
+  }
+
+/* Date selector */
+/* Date selector button styles */
+.date-selector button {
+  background: none; /* No background */
+  border: none; /* Remove border */
+  color: white; /* Text color */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 18px; /* Increase font size for better visibility */
+  padding: 5px 10px; /* Padding for spacing */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Hover effect for the date selector buttons */
+.date-selector button:hover {
+  color: #cbc7c7; /* Change color on hover (you can adjust this) */
+}
+
+/* Style for the date display */
+.date-selector span {
+  font-weight: 400;
+  color: white; /* Ensure date text is white */
+}
+
+
+/* Exchange rate table */
+.exchange-rate-table {
+  margin-top: 0px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  background-color: #005050; /* Table background */
+  border-radius: 8px;
+}
+
+.exchange-rate-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500; /* Adjusted for header */
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* White border for contrast */
+  color: white; /* Header text color */
+}
+
+.currency-info-label {
+  display: flex;
+  width: 120px;
+}
+
+/* Rate container label */
+.rate-container-label {
+  display: flex;
+  justify-content: space-between;
+  width: 120px;
+  color: white; /* Rate labels color */
+  font-weight: 400; /* Set to normal weight */
+}
+
+/* Exchange rate rows */
+
+.exchange-rate-row:last-child {
+  border-bottom: none;
+}
+
+.currency-info {
+  display: flex;
+  align-items: center;
+}
+
+
+
+/* Go to store button */
+.store-button {
+    background-color: #FFD900; /* Button background color */
+    color: black; /* Button text color */
+    padding: 8px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'Inter'; /* Applying the Inter font */
+    position: relative; /* Position the button within the widget */
+    left: 130px; /* Align the button to the right side of the widget */
+    bottom: 5px;
+    width: 170px; /* Fixed width */
+    height: 30px; /* Fixed height */
+  }
+  
+  .store-button:hover {
+    background-color: #d9b903;
+  }
+
+
+/* Style for labels */
+label {
+  color: white; /* Change the text color to white */
+  font-family: 'Inter'; /* Apply the Inter font */
+  margin-bottom: 5px; /* Optional: Add some space below the label */
+  font-weight: 400; /* Set to normal weight */
+}
+
+.rate-container-label {
+    display: flex;
+    justify-content: space-between;
+    width: 100px; /* Set a fixed width */
+    color: white; /* Rate labels color */
+    font-weight: 400; /* Set to normal weight */
+  }
+  
+  /* Ensure all rows have the same width for alignment */
+  .rate-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100px; /* Adjust this to match the header */
+    color: white; /* Ensure text color is white */
+  }
+
+/* Style for paragraph text */
+p {
+  color: white; /* Ensure paragraph text is white */
+  font-weight: 400; /* Set to normal weight */
+}
