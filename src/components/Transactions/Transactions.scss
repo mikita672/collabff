@@ -1,0 +1,104 @@
+.recent-transactions {
+    .recent-transactions__top-line {
+        padding-bottom: 14px;
+        border-bottom: 2px solid #fff;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        .recent-transactions__type {
+            color: #fff;
+            font-weight: 300;
+        }
+        .recent-transactions {
+            display: flex;
+            flex-direction: row;
+            grid-gap: 20px;
+        }
+    }
+    .recent-transactions__table {
+        margin-top: 15px;
+        .recent-transactions__header {
+            padding: 0 10px;
+            display: grid;
+            grid-template-columns: 2fr 4fr 5fr 2fr;
+            color: #fff;
+            .recent-transactions__header-item.amount{
+                text-align: left;
+                margin-left: -10px;
+            }
+        }
+        .recent-transactions__body {
+            margin-top: 10px;
+            .recent-transactions__row {
+                display: grid;
+                grid-template-columns: 2fr 4fr 5fr 2fr;
+                padding: 10px;
+                background-color: #00695c;
+                margin-bottom: 10px;
+                border-radius: 8px;
+                transition: background-color 0.3s ease;
+                color: #fff;
+                &:hover {
+                    background-color: #00796b;
+                }
+                &:last-child{
+                    margin-bottom: 0;
+                }
+                .recent-transactions__item{
+                    &.transaction_amount{
+                        &[data-type="1"]{
+                            color: #00ff00;
+                            // font-size: 20px;
+                            font-weight: 400;
+                            position: relative;
+                            &::before{
+                                content: "+";
+                                position: absolute;
+                                left: -10px;
+                                top: -1px;
+                            }
+                            &::after{
+                                content: "EUR";
+                                padding: 6px;
+                                font-size: 14px;
+                            }
+                        }
+                        &[data-type="0"]{
+                            color: #000;
+                            // font-size: 20px;
+                            font-weight: 400;
+                            position: relative;
+                            &::before{
+                                content: "-";
+                                position: absolute;
+                                left: -8px;
+                                top: -1px;
+                            }
+                            &::after{
+                                content: "EUR";
+                                padding: 6px;
+                                font-size: 14px;
+                                // position: absolute;
+                                // right: 10px;
+                                // bottom: 0;
+                            }
+                        }
+                    }
+                    &.amount{
+                        position: relative;
+                        &::after{
+                            content: "EUR";
+                            padding: 6px;
+                            font-size: 14px;
+                            // position: absolute;
+                            // right: 10px;
+                            // bottom: 0;
+                        }  
+                    }
+                    
+                }
+            }
+        }
+    }
+}

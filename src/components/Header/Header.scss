@@ -1,0 +1,89 @@
+@import '../../consts.scss';
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $dark-background-color;
+    color: white;
+    padding: 0;
+    padding-top: 25px;
+    padding-bottom: 30px;
+    height: 150px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 6px 12px 0 rgba($color: #000000, $alpha: 0.35);
+    .header-wrapper {
+        max-width: 1200px;
+        margin: auto;
+        width: 100%;
+        .header-top {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            .logo {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                grid-gap: 28px;
+                span {
+                    font-size: 32px;
+                }
+            }
+            .header-top-right {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                grid-gap: 33px;
+                .language-switch {
+                    font-size: 24px;
+                    color: $simple-light-color;
+                    position: relative;
+                    &:hover {
+                        color: $hovered-light-color
+                    }
+                    &::after {
+                        position: absolute;
+                        top: calc(50% - 24px);
+                        right: -16px;
+                        content: "";
+                        height: 48px;
+                        width: 1px;
+                        background-color: $simple-light-color;
+                    }
+                }
+                .log-out {
+                    color: $simple-light-color;
+                    font-size: 24px;
+                    &:hover {
+                        color: $hovered-light-color
+                    }
+                }
+            }
+        }
+        .header-bottom {
+            margin-top: 24px;
+            .nav-links {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                grid-gap: 30px;
+                a {
+                    font-size: 18px;
+                    font-weight: 300;
+                    color: $simple-light-color;
+                    &:hover {
+                        color: $hovered-light-color;
+                    }
+                    &.active{
+                        color: $hovered-light-color;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}

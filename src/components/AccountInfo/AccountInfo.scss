@@ -1,0 +1,72 @@
+.account-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .account-info__top-line {
+        padding-bottom: 14px;
+        border-bottom: 2px solid #fff;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        .account-info__type {
+            color: #fff;
+            font-weight: 300;
+        }
+        .account-info__buttons {
+            display: flex;
+            flex-direction: row;
+            grid-gap: 20px;
+        }
+    }
+    .account-info__bottom-line {
+        // margin-top: 70px;
+        display: flex;
+        flex-direction: row;
+        align-items: end;
+        justify-content: space-between;
+        .bottom-line__left-part {
+            display: flex;
+            flex-direction: column;
+            grid-gap: 20px;
+            .account-info__id-account {
+                color: #fff;
+                font-weight: 200;
+                font-size: 22px;
+            }
+            .account-info__name-account {
+                color: #fff;
+                font-size: 22px;
+                font-weight: 200;
+                text-transform: uppercase;
+            }
+        }
+        .bottom-line__right-part {
+            display: flex;
+            flex-direction: column;
+            grid-gap: 10px;
+            .account-info__amount {
+                text-align: end;
+                color: #fff;
+                h4 {
+                    font-size: 24px;
+                    font-weight: 200;
+                    margin-bottom: 6px;
+                }
+                p {
+                    font-size: 24px;
+                    font-weight: 300;
+                    span {
+                        font-size: 16px;
+                    }
+                }
+            }
+            .account-info__buttons {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                grid-gap: 20px;
+            }
+        }
+    }
+}

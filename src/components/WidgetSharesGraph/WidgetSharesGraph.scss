@@ -1,0 +1,88 @@
+@import '../../consts.scss';
+
+
+.widgetSharesGraph {
+    width: 680px; /* Widget width */
+    background-color: $avr-background-color;
+    padding: 20px; /* Consistent padding */
+    box-sizing: border-box; /* Include padding in dimensions */
+    border-radius: 20px; /* Rounded corners */
+    font-family: 'Inter', sans-serif; /* Inter font */
+    font-size: 16px; /* Font size */
+    line-height: 1.5; /* Line height */
+    color: white; /* White text for visibility */
+}
+
+/* Header Styles */
+h3 {
+    margin: 0; /* Remove default margin */
+    padding-bottom: 10px; /* Space below header */
+    font-weight: 400; /* Font weight */
+    color: white; /* White text */
+}
+
+/* Top Row Styles */
+.top-row {
+    display: flex;
+    justify-content: space-between; /* Space between selectors */
+    align-items: center; /* Align items vertically */
+    padding-bottom: 10px; /* Padding for spacing */
+    margin-bottom: 10px; /* Space below the row */
+}
+
+/* Divider Styles */
+.divider {
+    border: none;
+    border-bottom: 1px solid white; /* Solid white divider */
+    margin: 0; /* Set margins to zero */
+    padding: 0; /* Set padding to zero */
+}
+
+/* Company Selector Styles */
+.company-select {
+    display: flex;
+    align-items: center; /* Align labels and selects */
+}
+
+.company-select label {
+    margin-right: 10px; /* Space between label and select */
+    font-weight: 400; /* Inter font with normal weight */
+    color: white; /* Label text color */
+}
+
+/* Dropdown Styles */
+.company-dropdown {
+    width: 120px; /* Fixed width */
+    padding: 10px; /* Padding for comfort */
+    border: 1px solid #007474; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #004040; /* Darker background */
+    color: white; /* Text color */
+    appearance: none; /* Custom appearance */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M7 10l5 5 5-5H7z"/></svg>'); /* Arrow as background */
+    background-repeat: no-repeat;
+    background-position: right 10px center; /* Position the arrow */
+    background-size: 12px; /* Size of the arrow */
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Transition effects */
+}
+
+.company-dropdown:hover,
+.company-dropdown:focus {
+    background-color: #003838; /* Darker background on hover/focus */
+    outline: none; /* Remove focus outline */
+}
+
+.company-dropdown option {
+    background-color: #002F2F; /* Option background color */
+    color: white; /* Option text color */
+}
+
+.company-dropdown option:hover {
+    background-color: #003535; /* Background color on hover */
+}
+
+/* Graph Container Styles */
+.graph-container {
+    position: relative; /* Relative positioning for layout */
+    height: 250px; /* Set a smaller height for the graph */
+}

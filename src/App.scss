@@ -1,0 +1,13 @@
+
+*{
+  margin: 0px;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  transition: all .2s ease;
+  &:hover, &::after, &::before, &:focus{
+    transition: all .2s ease;
+  }
+}

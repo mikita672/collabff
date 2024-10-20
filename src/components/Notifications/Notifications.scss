@@ -1,0 +1,120 @@
+.notifications{
+    .notifications__top-line {
+        padding-bottom: 14px;
+        border-bottom: 2px solid #fff;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        .notifications__type {
+            color: #fff;
+            font-weight: 300;
+        }
+        .notifications__buttons {
+            display: flex;
+            flex-direction: row;
+            grid-gap: 20px;
+        }
+    }
+    .notifications__table {
+        margin-top: 15px;
+        .notifications__header {
+            padding: 0 10px;
+            display: grid;
+            grid-template-columns: 8fr 3fr 1fr;
+            color: #fff;
+            .notifications__header-item.amount{
+                text-align: left;
+                margin-left: -10px;
+            }
+        }
+        .notifications__body {
+            margin-top: 10px;
+            .notifications__row {
+                display: grid;
+                grid-template-columns: 8fr 3fr 1fr;
+                padding: 10px;
+                background-color: #00695c;
+                margin-bottom: 10px;
+                border-radius: 8px;
+                transition: background-color 0.3s ease;
+                color: #fff;
+                &:hover {
+                    background-color: #00796b;
+                }
+                &:last-child{
+                    margin-bottom: 0;
+                }
+                .notifications__item{
+                    &.transaction_amount{
+                        &[data-type="1"]{
+                            color: #00ff00;
+                            // font-size: 20px;
+                            font-weight: 400;
+                            position: relative;
+                            &::before{
+                                content: "+";
+                                position: absolute;
+                                left: -10px;
+                                top: -1px;
+                            }
+                            &::after{
+                                content: "EUR";
+                                padding: 6px;
+                                font-size: 14px;
+                            }
+                        }
+                        &[data-type="0"]{
+                            color: #000;
+                            // font-size: 20px;
+                            font-weight: 400;
+                            position: relative;
+                            &::before{
+                                content: "-";
+                                position: absolute;
+                                left: -8px;
+                                top: -1px;
+                            }
+                            &::after{
+                                content: "EUR";
+                                padding: 6px;
+                                font-size: 14px;
+                                // position: absolute;
+                                // right: 10px;
+                                // bottom: 0;
+                            }
+                        }
+                    }
+                    &.amount{
+                        position: relative;
+                        &::after{
+                            content: "EUR";
+                            padding: 6px;
+                            font-size: 14px;
+                            // position: absolute;
+                            // right: 10px;
+                            // bottom: 0;
+                        }  
+                    }
+                    &.link {
+                        flex: 0.5;
+                        display: flex;
+                        justify-content: center;
+                        padding-left: 15px;
+                        .link-button {
+                            background-color: transparent;
+                            border: none;
+                            color: white;
+                            font-size: 18px;
+                            cursor: pointer;
+                            &:hover {
+                                color: #ffb300;
+                            }
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+}

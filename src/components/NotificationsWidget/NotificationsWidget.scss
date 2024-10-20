@@ -1,0 +1,129 @@
+.notifications-widget {
+    width: 480px;
+    height: 308px;
+    background-color: #005050;
+    border-radius: 10px;
+    color: white;
+    font-family: Arial, sans-serif;
+  }
+  
+  .notifications-header {
+    display: flex;
+    margin-right: 20px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .notifications-header h2 {
+    margin: 20px;
+    font-size: 1.5em;
+  }
+  
+  .notifications-header button{
+    border: none;
+    background-color: transparent;
+    
+  }
+  
+  .badge {
+    background-color: #b51717;
+    color: white;
+    border-radius: 10px;
+    padding: 10px 15px;
+    font-size: 0.9em;
+    font-weight: bold;
+    margin-left: 100px;
+  }
+  
+  .all-notifications-btn {
+    background-color: #ffd700;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .all-notifications-btn:hover {
+    background-color: #e5c200;
+  }
+  
+  .notifications-body {
+    background-color: #316c65;
+    border-radius: 10px;
+    padding: 10px;
+    align-items: center;
+  }
+  
+  .notification-item {
+    display: flex;
+    margin-left: 15px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3B8181;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    width: 450px;
+    height: 90px; /* Set the fixed height */
+    box-sizing: border-box; /* Ensure padding is included in the height */
+  }
+  
+  .notification-item-popup {
+    display: flex;
+    margin-right: 10px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3B8181;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    width: 450px;
+    height: 90px; /* Set the fixed height */
+    box-sizing: border-box; /* Ensure padding is included in the height */
+  }
+  
+  .notification-text {
+    display: flex;
+    align-items: left;
+    font-size: 1em;
+    line-height: 1.4;
+    width: 65%; /* Allow enough space for the text */
+    overflow-wrap: break-word;
+  }
+  
+  .notification-time {
+    font-size: 0.9em;
+    width: 15%; /* Set a fixed width for the date */
+    text-align: right; /* Align the date to the right */
+  }
+  
+  .notification-icon {
+    font-size: 1.2em;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    width: 10%; /* Set a fixed width for the icon */
+    text-align: center; /* Align the icon in the center */
+  }
+  
+  .hr-line {
+    width: 450px;                /* Set the width to 450 pixels */
+    border: none;                /* Remove default border */
+    border-top: 2px solid white; /* Create a solid white line */
+    margin: 0 auto;              /* Center the line */
+    margin: 10px;            /* Optional: Add some space above the line */
+  }
+  
+  .bullet-point{
+    margin-left: 10px;
+  }
+  
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .close-icon {
+    margin-top: 5px;
+    width: 20px;
+    height: 20px;
+  }

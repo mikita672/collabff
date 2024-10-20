@@ -1,0 +1,289 @@
+  
+.header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .divider {
+    border: none;
+    border-bottom: 1px solid white; /* White line */
+    margin-bottom: 20px;
+  }
+  
+  .header-section h2 {
+    font-weight: 400;
+    color: white;
+  }
+  
+
+
+  
+  .shares-list {
+    margin-bottom: 20px;
+  }
+  
+  .company-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .company-row:last-child {
+    border-bottom: none; /* Remove the border for the last row */
+  }
+  
+  .company-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .company-logo {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+  }
+  
+  .change {
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+  }
+  
+  .change.up {
+    color: green;
+  }
+  
+  .change.down {
+    color: red;
+  }
+  
+  .all-companies-button {
+    background-color: #FFD900; /* Button background color */
+    color: black; /* Button text color */
+    padding: 8px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'Inter'; /* Applying the Inter font */
+    position: relative; /* Position the button within the widget */
+    left: 130px; /* Align the button to the right side of the widget */
+    bottom: 25px; /* Align the button to the bottom side of the widget */
+    width: 160px; /* Fixed width */
+    height: 30px; /* Fixed height */
+  }
+  
+  .all-companies-button:hover {
+    background-color: #d9b903;
+  }
+
+  label {
+    color: white; /* Change the text color to white */
+    font-family: 'Inter'; /* Apply the Inter font */
+    margin-bottom: 5px; /* Optional: Add some space below the label */
+    font-weight: 400; /* Set to normal weight */
+  }
+
+  #base-currency {
+    width: 120px;
+    padding: 10px;
+    border: 1px solid #007474;
+    border-radius: 5px;
+    background-color: #005050;
+    color: white;
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="16px" height="16px"><path d="M7 10l5 5 5-5H7z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+  
+  #base-currency:hover,
+  #base-currency:focus {
+    background-color: #034b4b;
+    outline: none;
+  }
+  
+  #base-currency option {
+    background-color: #014242;
+    color: white;
+  }
+  
+  #base-currency option:hover {
+    background-color: #014f4f;
+  }
+  
+  /* Apply the same styling to the date-range select dropdown in company shares widget */
+  .date-range-select {
+    width: 100px; /* Same width */
+    padding: 10px; /* Same padding */
+    border: 1px solid #007474; /* Darker border color */
+    border-radius: 5px;
+    background-color: #005050; /* Set background color to match theme */
+    color: white; /* Text color */
+    appearance: none; /* Remove default dropdown arrow */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="16px" height="16px"><path d="M7 10l5 5 5-5H7z"/></svg>'); /* Custom dropdown arrow */
+    background-repeat: no-repeat;
+    background-position: right 10px center; /* Position the arrow */
+    background-size: 16px; /* Size of the arrow */
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transition effects */
+    margin-bottom: 18px;
+    margin-top: 12px;
+  }
+  
+  .date-range-select:hover,
+  .date-range-select:focus {
+    background-color: #034b4b; /* Darker background on hover/focus */
+    outline: none; /* Remove default focus outline */
+  }
+  
+  .date-range-select option {
+    background-color: #014242; /* Option background color */
+    color: white; /* Option text color */
+  }
+  
+  .date-range-select option:hover {
+    background-color: #014f4f; /* Background color on hover for options */
+  }
+  
+
+.company-shares-widget {
+  width: 480px;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  background-color: #005050;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: white;
+  display: flex; /* Flexbox for layout */
+  justify-content: space-between; /* Space between main content and right section */
+  position: relative;
+}
+
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.divider {
+  border: none;
+  border-bottom: 1px solid white;
+  margin-bottom: 20px;
+}
+
+.header-section h2 {
+  font-weight: 400;
+  color: white;
+}
+
+.date-range-select {
+  background-color: #005050;
+  color: white;
+  border: 1px solid white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.date-range-select option {
+  background-color: #005050;
+  color: white;
+}
+
+.shares-list {
+  flex: 1; /* Allow this section to take up most of the width */
+  margin-right: 20px;
+}
+
+.company-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.company-row:last-child {
+  border-bottom: none;
+}
+
+.company-info {
+  display: flex;
+  align-items: center;
+}
+
+.company-logo {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.change {
+  font-weight: 400;
+}
+
+.change.up {
+  color: rgb(46, 216, 46);
+}
+
+.change.down {
+  color: red;
+}
+
+/* Right-side section for the most rising company */
+.right-section {
+  margin-top: 20px;
+  width: 150px;
+  height: 180px;
+  background-color: #003333;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.right-section img {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 5px;
+}
+
+.right-section .company-name {
+  font-weight: bold;
+}
+
+.right-section .company-change {
+  color: white;
+  font-size: 18px;
+}
+
+/* Button styling */
+.all-companies-button {
+  background-color: #FFD900;
+  color: black;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: 'Inter';
+  position: absolute;
+  bottom: 15px;
+  left: 79%;
+  transform: translateX(-50%);
+}
+
+.all-companies-button:hover {
+  background-color: #d9b903;
+}
